@@ -1,7 +1,7 @@
 // src/components/Button/Button.tsx
 import React, { useState } from "react";
 
-export interface ButtonProps {
+interface ButtonProps {
   onClick?: () => void;
   label: string;
   disabled?: boolean;
@@ -18,7 +18,7 @@ export interface ButtonProps {
   hoverBorderColor: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   onClick,
   label,
   disabled = false,

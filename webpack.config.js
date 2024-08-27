@@ -1,29 +1,29 @@
 const path = require("path");
+const HtmlWeb
 
 module.exports = {
-  entry: "./src/components/index.ts", // Entry point for bundling
+  entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, "src/components/dist"),
-    filename: "bundle.js", // Output file name
-    library: "MyComponents", // Global variable name for UMD
-    libraryTarget: "umd", // UMD format for compatibility
-    umdNamedDefine: true,
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    library: "MyComponentLibrary",
+    libraryTarget: "umd",
     globalObject: "this",
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"], // Extensions to resolve
+    extensions: [".ts", ".tsx", ".js"],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/, // Match .ts and .tsx files
-        use: "ts-loader", // Use ts-loader for TypeScript files
+        test: /\.tsx?$/,
+        use: "ts-loader",
         exclude: /node_modules/,
       },
     ],
   },
   externals: {
-    react: "react", // React as external dependency
+    react: "react", // External dependency
     "react-dom": "react-dom",
   },
 };
