@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import Sidebar, { SidebarProps } from "../Sidebar/Sidebar";
 
 export default {

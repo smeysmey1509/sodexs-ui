@@ -1,5 +1,5 @@
 import { Meta } from "@storybook/react";
-import Layouts, { LayoutProps } from "../layouts/Layouts";
+import Layouts, { LayoutProps } from "../Layouts/Layouts";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineLightMode } from "react-icons/md";
